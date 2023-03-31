@@ -7,5 +7,5 @@ import java.util.List;
 @Getter
 @Setter
 @ToString
-public class Wizard {
+public class Wizard extends Character {
 }
