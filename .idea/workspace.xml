@@ -4,9 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1b6b3503-74a4-424e-9f8d-950b9fe9279a" name="Changes" comment="test git">
+    <list default="true" id="1b6b3503-74a4-424e-9f8d-950b9fe9279a" name="Changes" comment="test git 2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/model/character/AbstractEnemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/model/character/AbstractEnemy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/model/character/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/model/character/Character.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/model/character/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/model/character/Enemy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/model/character/Wizard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/model/character/Wizard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/model/levels/Level.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/model/levels/Level.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/model/misc/Core.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/model/misc/Core.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/model/misc/House.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/model/misc/House.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/model/misc/SortingHat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/model/misc/SortingHat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/model/misc/Wand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/model/misc/Wand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/model/spells/AbstractSpell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/model/spells/AbstractSpell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/utils/UserInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/utils/UserInput.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +54,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/chaou/OneDrive - ISEP/[ISEP_A1] Semestre 2/Algorithmique et programmation/Morpionn",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -65,7 +77,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1680249655752</updated>
-      <workItem from="1680249656836" duration="3442000" />
+      <workItem from="1680249656836" duration="13292000" />
     </task>
     <task id="LOCAL-00001" summary="new maven projet et créations des classses">
       <created>1680252560223</created>
@@ -81,7 +93,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680253048964</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="test git 2">
+      <created>1680253118312</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1680253118312</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -91,6 +110,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="new maven projet et créations des classses" />
     <MESSAGE value="test git" />
-    <option name="LAST_COMMIT_MESSAGE" value="test git" />
+    <MESSAGE value="test git 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="test git 2" />
   </component>
 </project>

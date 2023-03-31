@@ -1,4 +1,8 @@
 package com.example.model.character;
-
-public class Enemy {
+import lombok.ToString;
+@ToString
+public class Enemy extends AbstractEnemy {
+    public Enemy(String name, String description, int maxHp, int attackDamage) {
+        super(name, description, maxHp, attackDamage);
+    }
 }
