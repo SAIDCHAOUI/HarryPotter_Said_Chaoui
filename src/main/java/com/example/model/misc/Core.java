@@ -14,12 +14,4 @@ public enum Core {
     Core(String name) {
         this.name = name;
     }
-
-    public void applyBonus(Wizard wizard) {
-        switch (this) {
-            case PHOENIX_FEATHER -> wizard.setDefense(wizard.getDefense() * 1.05);
-            case DRAGON_HEARTSTRING -> wizard.setAttackDamage((int) (wizard.getAttackDamage() * 1.05));
-            case KNEAZLE_WHISKER -> wizard.setPotionEfficiency(wizard.getPotionEfficiency() * 1.05);
-        }
-    }
 }

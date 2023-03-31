@@ -8,4 +8,9 @@ public abstract class AbstractEnemy extends Character {
         super(name, maxHp, attackDamage);
         this.description = description;
     }
+
+    @Override
+    public String toString() {
+        return this.getName() + " (" + this.getDescription() + ")";
+    }
 }

@@ -9,5 +9,4 @@ public class Level_1_PhilosopherStone extends Level{
                 wizard,
                 new Spell("Wingardium Leviosa", 10, 100));
     }
-
 }

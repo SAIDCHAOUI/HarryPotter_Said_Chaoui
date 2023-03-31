@@ -7,22 +7,20 @@ import java.util.List;
 import com.example.utils.UserInput;
 @Getter
 @Setter
-@ToString
 public class Wizard extends Character {
     private Pet pet;
     private Wand wand;
     private House house;
-    @Setter(AccessLevel.NONE)
-    private List<AbstractSpell> knownSpells;
-    @Setter(AccessLevel.NONE)
-    private List<Potion> potions;
+    @Setter(AccessLevel.NONE) private List<AbstractSpell> knownSpells;
+    @Setter(AccessLevel.NONE) private List<Potion> potions;
 
+    // amount of damage that is blocked (e.g. 10 means that the wizard will only take damage - 10 see takeDamage)
     private double defense;
-    private double precision;
+
+    // percentage of the potion's effect that is applied (e.g. 0.5 means that the potion will only heal 50% of its effect)
     private double potionEfficiency;
 
-    @Setter(AccessLevel.NONE)
-    private UserInput input = UserInput.getInstance();
+    @Setter(AccessLevel.NONE) private UserInput input = UserInput.getInstance();
 
     public Wizard(String name, int maxHp, int attackDamage) {
         super(name, maxHp, attackDamage);
@@ -30,25 +28,19 @@ public class Wizard extends Character {
         this.knownSpells = new ArrayList<>();
         this.potions = new ArrayList<>();
         this.defense = 10;
+        this.potionEfficiency = 0.5;
 
         SortingHat.assignHouse(this);
-
-        System.out.println("What pet do you want?");
-        System.out.println("1. Owl");
-        System.out.println("2. Rat");
-        System.out.println("3. Cat");
-        System.out.println("4. Toad");
-        int choice = input.readInt();
-        pet = Pet.values()[choice - 1];
-
+        SortingHat.assignWand(this);
     }
 
+    // I don't know the utility of this thing.
     public void defend() {
         System.out.println("defense:" + defense);
     }
 
-    public void heal(int healamout) {
-        hp = Math.min(maxHp, hp + healamout);
+    public void heal (int healAmount) {
+        hp = Math.min(hp + healAmount, maxHp);
     }
 
     public void learnSpell(AbstractSpell spell) {
@@ -58,7 +50,8 @@ public class Wizard extends Character {
     @Override
     public boolean attack(Character character) {
         boolean isDead = character.takeDamage((int) (attackDamage * precision));
-        if (isDead) {
+        if (isDead)
+        {
             System.out.println("You killed " + character.getName() + "!");
             System.out.println("Do you want to");
             System.out.println("1. Heal yourself");
@@ -66,7 +59,8 @@ public class Wizard extends Character {
             int choice = input.readInt();
             if (choice == 1) {
                 heal(10);
-            } else if (choice == 2) {
+            }
+            else if (choice == 2) {
                 attackDamage += 5;
             }
         }
@@ -79,34 +73,28 @@ public class Wizard extends Character {
         return super.takeDamage(damage);
     }
 
-    public void drinkPotion(Potion potion) {
-        if (potions.contains(potion)) {
-            potion.drink(this);
-            potions.remove(potion);
-        }
-    }
-
-    public <T> int displayList(List<T> List) {
-        if (List.size() == 0) {
-            System.out.println("You don't have any potions");
-            return -1;
-        }
-        for (int i = 0; i < List.size(); i++) {
-            System.out.println(i + 1 + ". " + List.get(i));
+    public <T> int displayList(List<T> list) {
+        if (list.size() == 0) {
+            System.out.println("You don't have any");
+            return -2;
         }
 
-        System.out.println("2. Back");
+        for (int i = 0; i < list.size(); i++) {
+            System.out.println(i + 1 + ". " + list.get(i));
+        }
+        System.out.println("-2. Back");
+
         int choice = input.readInt();
-        if (choice ==2) {
+        if (choice == -2) {
             return choice;
         }
-
         if (choice < 0 || choice > potions.size() + 1) {
             System.out.println("Invalid choice");
             return -1;
         }
         return choice;
     }
+
     public void castSpell(Character target) {
         int choice = -1;
         while (choice == -1) {
@@ -163,53 +151,32 @@ public class Wizard extends Character {
             }
             target.attack(this);
         }
-
-        public String listList(List<?> list) {
-            if (list.isEmpty()) {
-                return "None ! Learn some before you come back here !";
-            }
-            StringBuilder sb = new StringBuilder();
-            for (Object o : list) {
-                sb.append("\t").append(o).append("\n");
-            }
-            return sb.toString();
-        }
-
-        @Override
-        public String toString() {
-            return "Name: '" + name + "'\n" +
-                    "Hp: " + hp + '/' + maxHp + "\n" +
-                    "Attack Damage: " + attackDamage + "\n" +
-                    "Pet: " + pet + "\n" +
-                    "Wand: " + wand + "\n" +
-                    "House: " + house + "\n" +
-                    "Spells: " + listList(knownSpells) + "\n" +
-                    "Potions: " + listList(potions) + "\n" +
-                    "Defense: " + defense + "\n" +
-                    "Precision: " + precision + "\n" +
-                    "Potion Efficiency: " + potionEfficiency + "\n";
-        }
     }
 
+    public String listList(List<?> list) {
+        if (list.isEmpty()) {
+            return "None ! Learn some before you come back here !";
+        }
+        StringBuilder sb = new StringBuilder();
+        for (Object o : list) {
+            sb.append("\t").append(o).append("\n");
+        }
+        return sb.toString();
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    @Override
+    public String toString() {
+        return "Name: '" + name + "'\n" +
+                "Hp: " + hp + '/' + maxHp + "\n" +
+                "Attack Damage: " + attackDamage + "\n" +
+                "Pet: " + pet + "\n" +
+                "Wand: " + wand + "\n" +
+                "House: " + house + "\n" +
+                "Spells: " + listList(knownSpells) + "\n" +
+                "Potions: " + listList(potions) + "\n" +
+                "Defense: " + defense + "\n" +
+                "Precision: " + precision + "\n" +
+                "Potion Efficiency: " + potionEfficiency + "\n";
+    }
 }
 

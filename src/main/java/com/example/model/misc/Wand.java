@@ -13,20 +13,8 @@ public class Wand {
         this.size = size;
     }
 
-    public void castSpell(AbstractSpell abstractSpell, Character enemy) {
-        // calcul des chances de réussite
-        int successChance = abstractSpell.getSuccessRate() * (size / 10);
-        // Roll the dice to see if the spell hits
-        Random random = new Random();
-        int roll = random.nextInt(100) + 1;
-        if (roll <= successChance) {
-            // Spell hits, deal damage to the enemy
-            int damage = abstractSpell.getDamage();
-            enemy.takeDamage(damage);
-            System.out.printf("You cast %s and deal %d damage to the enemy!\n", abstractSpell.getName(), damage);
-        } else {
-            // Spell misses
-            System.out.printf("You cast %s but miss the enemy!\n", abstractSpell.getName());
-        }
+    @Override
+    public String toString() {
+        return "Wand of " + core + " with a size of " + size;
     }
 }

@@ -20,7 +20,4 @@ public class Potion {
         return name;
     }
 
-    public void drink(Wizard wizard) {
-        wizard.heal(10);
-    }
 }

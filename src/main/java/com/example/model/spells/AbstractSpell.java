@@ -1,35 +1,43 @@
 package com.example.model.spells;
 import com.example.model.character.Character;
+import com.example.model.character.Wizard;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
+import java.util.Random;
+
 @Getter
 @Setter
 @AllArgsConstructor
 public abstract class AbstractSpell {
-    private String name;
-    private int requiredLevel;
-    private int successRate;
+    private final String name;
+    private final int maxDamage;
+    // percentage that the spell will be cast successfully (e.g. 50 means that the spell will be cast successfully 50% of the time)
+    private final int successRate;
 
-    public boolean cast(Character enemy) {
-        boolean canCastSpell = canCastSpell();
-        if (canCastSpell) {
-            System.out.println("You cast " + name + " on " + enemy.getName());
-        } else {
-            System.out.println("You failed to cast " + name + " on " + enemy.getName() + "!");
+    public void cast(Wizard caster, Character target) {
+        if (canCast()) {
+            System.out.println("Casting spell " + this.getName() + " on " + target.getName());
+            target.takeDamage((int) (getDamage() * caster.getPrecision()));
         }
-        return canCastSpell;
-    }
-
-    public boolean canCastSpell() {
-        return successRate <= (int) (Math.random() * 100);
+        else
+            System.out.println("Spell " + this.getName() + " failed");
     }
 
     public int getDamage() {
+        Random random = new Random();
+        return random.nextInt(this.maxDamage+ 1);
+    }
 
-        return 0;
+    public boolean canCast() {
+        int random = new Random().nextInt(100);
+        return random <= this.successRate;
+    }
+    @Override
+    public String toString() {
+        return name;
     }
 
 }
