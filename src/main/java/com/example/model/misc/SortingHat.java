@@ -1,5 +1,7 @@
 package com.example.model.misc;
 import com.example.model.character.Wizard;
+
+import java.io.DataInput;
 import java.util.Random;
 public class SortingHat {
     public static House assignHouse(Wizard wizard) {
@@ -20,5 +22,6 @@ public class SortingHat {
         wizard.setWand(wand);
         return wand;
     }
+
 }
 

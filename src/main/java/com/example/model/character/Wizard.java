@@ -2,6 +2,9 @@ package com.example.model.character;
 import com.example.model.misc.*;
 import com.example.model.spells.AbstractSpell;
 import lombok.*;
+
+import java.lang.reflect.GenericDeclaration;
+import java.lang.reflect.TypeVariable;
 import java.util.ArrayList;
 import java.util.List;
 import com.example.utils.UserInput;
@@ -14,10 +17,10 @@ public class Wizard extends Character {
     @Setter(AccessLevel.NONE) private List<AbstractSpell> knownSpells;
     @Setter(AccessLevel.NONE) private List<Potion> potions;
 
-    // amount of damage that is blocked (e.g. 10 means that the wizard will only take damage - 10 see takeDamage)
+
     private double defense;
 
-    // percentage of the potion's effect that is applied (e.g. 0.5 means that the potion will only heal 50% of its effect)
+
     private double potionEfficiency;
 
     @Setter(AccessLevel.NONE) private UserInput input = UserInput.getInstance();
@@ -34,7 +37,6 @@ public class Wizard extends Character {
         SortingHat.assignWand(this);
     }
 
-    // I don't know the utility of this thing.
     public void defend() {
         System.out.println("defense:" + defense);
     }

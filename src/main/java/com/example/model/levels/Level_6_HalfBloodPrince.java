@@ -4,6 +4,6 @@ import com.example.model.character.Wizard;
 public class Level_6_HalfBloodPrince extends Level{
     public Level_6_HalfBloodPrince(Wizard wizard) {
         super("Half Blood Prince", 6,
-                new Boss("Death Eater", "The dark Wizard", 250, 30), wizard);
+                new Boss("Death Eater", "The dark Wizard", 300, 30), wizard);
     }
 }

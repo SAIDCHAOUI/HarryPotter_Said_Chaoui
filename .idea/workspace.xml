@@ -7,21 +7,11 @@
     <list default="true" id="1b6b3503-74a4-424e-9f8d-950b9fe9279a" name="Changes" comment="avancement sur ennemies et levels">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/model/character/AbstractEnemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/model/character/AbstractEnemy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/model/character/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/model/character/Character.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/model/character/Wizard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/model/character/Wizard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/model/levels/Level_1_PhilosopherStone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/model/levels/Level_1_PhilosopherStone.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/model/levels/Level_2_ChamberOfSecrets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/model/levels/Level_2_ChamberOfSecrets.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/model/levels/Level_3_PrisonnerOfAskaban.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/model/levels/Level_3_PrisonnerOfAskaban.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/model/levels/Level_4_GobletOfFire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/model/levels/Level_4_GobletOfFire.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/model/levels/Level_5_OrderOfThePhoenix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/model/levels/Level_5_OrderOfThePhoenix.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/model/levels/Level_6_HalfBloodPrince.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/model/levels/Level_6_HalfBloodPrince.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/model/levels/Level_7_DeathlyHallows.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/model/levels/Level_7_DeathlyHallows.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/model/misc/Core.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/model/misc/Core.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/model/misc/Potion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/model/misc/Potion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/model/misc/Wand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/model/misc/Wand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/model/spells/AbstractSpell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/model/spells/AbstractSpell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/model/spells/ForbiddenSpell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/model/spells/ForbiddenSpell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/model/misc/SortingHat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/model/misc/SortingHat.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +71,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1680249655752</updated>
-      <workItem from="1680249656836" duration="27211000" />
+      <workItem from="1680249656836" duration="28260000" />
     </task>
     <task id="LOCAL-00001" summary="new maven projet et créations des classses">
       <created>1680252560223</created>
@@ -118,7 +108,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680284638319</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="avancement sur ennemies et levels">
+      <created>1680297033436</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1680297033436</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

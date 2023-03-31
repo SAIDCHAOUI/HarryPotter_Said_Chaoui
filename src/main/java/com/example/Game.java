@@ -17,7 +17,7 @@ public class Game {
         System.out.println("Welcome again " + wizard.getName() + " !");
         // Afficher les informations du Wizard
         System.out.printf("The sorting Hat assigned you to %s.\n", wizard.getHouse().getName());
-        System.out.printf("Yout magic wand is in %s with %d cm.\n", wizard.getWand().getCore().getName(), wizard.getWand().getSize());
+        System.out.printf("Your magic wand is in %s with %d cm.\n", wizard.getWand().getCore().getName(), wizard.getWand().getSize());
         System.out.printf("To start, you have %d HP.\n", wizard.getHp());
 
         // Commencement du jeu
