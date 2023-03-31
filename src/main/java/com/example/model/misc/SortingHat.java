@@ -15,7 +15,7 @@ public class SortingHat {
         Random random = new Random();
         int coreNumber = random.nextInt(Core.values().length);
         Core core = Core.values()[coreNumber];
-        int size = random.nextInt(10);
+        int size = random.nextInt(13) + 22;
         Wand wand = new Wand(core, size);
         wizard.setWand(wand);
         return wand;

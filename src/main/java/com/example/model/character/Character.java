@@ -16,15 +16,18 @@ public abstract class Character {
         this.attackDamage=attackDamage;
     }
 
-    public void attack(Character character){ character.takeDamage(attackDamage); }
+    public boolean attack(Character character){ character.takeDamage(attackDamage);
+        return false;
+    }
 
     public boolean isAlive(){
         return hp>0;
     }
-    public void takeDamage(int damage){
+    public boolean takeDamage(int damage){
         hp-=damage;
         if(hp<0){
             hp=0;
         }
+        return false;
     }
 }
